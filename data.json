@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "title": "Skyline Tower Renovation",
+      "category": "Commercial",
+      "description": "Complete refurbishment of a premium office tower with cutting-edge design and sustainable materials.",
+      "date": "2026-05-12",
+      "images": [
+        "/uploads/1779821746907-1000169625.jpg"
+      ]
+    },
+    {
+      "title": "Harbor View Villas",
+      "vendor": "Seaside Estates",
+      "category": "Residential",
+      "description": "Luxury waterfront homes with immersive VR-supported design walkthroughs for every client.",
+      "date": "2026-03-27"
+    }
+  ],
+  "offers": [
+    {
+      "title": "Launch Discount",
+      "discount": "15% off",
+      "details": "Get 15% off architectural design consulting for the first 5 new contracts.",
+      "expires": "2026-10-31"
+    }
+  ]
+}

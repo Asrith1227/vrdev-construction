@@ -1,0 +1,13 @@
+{
+  "name": "vrdev-construction-site",
+  "version": "1.0.0",
+  "description": "Static construction portfolio website with optional backend persistence for cross-device sync.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2",
+    "multer": "^2.1.1"
+  }
+}
