@@ -1,9 +1,16 @@
+const cloudinary = require("cloudinary").v2;
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
 const app = express();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 const PORT = process.env.PORT || 3000;
 
@@ -71,15 +78,22 @@ const upload = multer({ storage });
    IMAGE UPLOAD API
 ========================= */
 
-app.post("/upload", upload.array("images"), (req, res) => {
+app.post("/upload", upload.array("images"), async (req, res) => {
 
   try {
 
-    const imagePaths = req.files.map((file) => {
-      return `/uploads/${file.filename}`;
-    });
+    const uploadedImages = [];
 
-    res.json(imagePaths);
+    for (const file of req.files) {
+
+      const result = await cloudinary.uploader.upload(file.path);
+
+      uploadedImages.push(result.secure_url);
+
+      fs.unlinkSync(file.path);
+    }
+
+    res.json(uploadedImages);
 
   } catch (error) {
 
