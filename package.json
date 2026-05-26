@@ -1,29 +1,13 @@
-<<<<<<< HEAD
 {
-  "name": "vrdev-construction-site",
+  "name": "vrdev-construction",
   "version": "1.0.0",
-  "description": "Static construction portfolio website with optional backend persistence for cross-device sync.",
+  "description": "VR Developers Construction Website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.22.2",
-    "multer": "^2.1.1"
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
   }
 }
-=======
-{
-  "name": "vrdev-construction-site",
-  "version": "1.0.0",
-  "description": "Static construction portfolio website with optional backend persistence for cross-device sync.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.22.2",
-    "multer": "^2.1.1"
-  }
-}
->>>>>>> c516a5de8a7b562a81e7800b448a7675e345052b
